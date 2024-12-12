@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian in javascript</title>
+</head>
+<body onload="hide_para()">
+
+    <h1>accordian using javascript</h1>
+    <h2 onclick="show_para(this)">section 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, earum! Corrupti quia iusto,
+         voluptatibus odio nobis reprehenderit, mollitia, facere neque saepe id facilis ea nesciunt 
+         animi qui perferendis non cum.voluptatibus odio nobis reprehenderit, mollitia, facere neque 
+         saepe id facilis ea nesciunt animi qui perferendis non cum.
+    </p>
+    <h2 onclick="show_para(this)">section 2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, earum! Corrupti quia iusto,
+        voluptatibus odio nobis reprehenderit, mollitia, facere neque saepe id facilis ea nesciunt 
+        animi qui perferendis non cum.voluptatibus odio nobis reprehenderit, mollitia, facere neque 
+        saepe id facilis ea nesciunt animi qui perferendis non cum.
+   </p>
+    <h2 onclick="show_para(this)">section 3</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, earum! Corrupti quia iusto,
+        voluptatibus odio nobis reprehenderit, mollitia, facere neque saepe id facilis ea nesciunt 
+        animi qui perferendis non cum.voluptatibus odio nobis reprehenderit, mollitia, facere neque 
+        saepe id facilis ea nesciunt animi qui perferendis non cum.
+   </p>
+
+
+   <script>
+
+    function hide_para(){
+        // console.log(document.querySelectorAll("p"));
+        para=document.querySelectorAll("p");
+        len=para.length;
+
+
+        for(i=0;i<len;i++){
+            // console.log(para[i]);
+            para[i].style.display="none";
+        }
+    }
+
+      function show_para(curEle){
+        // console.log(curEle);
+        hide_para();
+         ans=curEle.nextElementSibling.style.display="block";
+        //  console.log(ans);
+        //  if(ans=="none"){
+        //     curEle.nextElementSibling.style.display="block";
+        //  }
+        //  else{
+        //     curEle.nextElementSibling.style.display="none";
+        //  }
+    }
+   </script>
+
+
+
+<style>
+
+    h1{
+        text-align: center;
+    }
+    h2,p{
+        width: 300px;
+        border: 1px solid #999;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    h2{
+        background-color: blueviolet;
+    }
+</style>
+
+</body>
+</html>
